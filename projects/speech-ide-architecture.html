@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Speech-Enabled IDE Architecture - Shyaam Niranjan</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../index.html" class="nav-logo">
+                <span class="logo-text">SN</span>
+                <span class="logo-dot"></span>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="../index.html" class="nav-link">Home</a></li>
+                <li><a href="../index.html#projects" class="nav-link">Projects</a></li>
+                <li><a href="../index.html#services" class="nav-link">Services</a></li>
+                <li><a href="../index.html#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Project Hero -->
+    <section class="project-hero">
+        <div class="container">
+            <div class="project-header">
+                <div class="project-breadcrumb">
+                    <a href="../index.html">Home</a>
+                    <i class="fas fa-chevron-right"></i>
+                    <a href="../index.html#projects">Projects</a>
+                    <i class="fas fa-chevron-right"></i>
+                    <a href="speech-enabled-ide.html">Speech-Enabled IDE</a>
+                    <i class="fas fa-chevron-right"></i>
+                    <span>System Architecture</span>
+                </div>
+                <h1 class="project-title">Speech-Enabled IDE Architecture</h1>
+                <p class="project-subtitle">Voice-driven programming pipeline and system design</p>
+                <div class="project-tech-hero">
+                    <span class="tech-tag">Python</span>
+                    <span class="tech-tag">ASR</span>
+                    <span class="tech-tag">Speech Processing</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Architecture Content -->
+    <section class="project-content">
+        <div class="container">
+            <div class="project-grid">
+                <div class="project-main">
+                    <div class="content-section">
+                        <h2>System Overview</h2>
+                        <p>The Speech-Enabled IDE architecture is designed as a sequential processing pipeline that transforms human voice commands into executable code. The system follows a clear data flow from speech input through recognition, interpretation, code generation, and execution.</p>
+                        <p>Each component in the pipeline is modular and loosely coupled, enabling independent development and testing of individual modules. The architecture prioritizes real-time processing and user feedback to ensure an interactive programming experience.</p>
+                    </div>
+                    
+                    <div class="content-section">
+                        <h2>Architecture Diagram</h2>
+                        <div class="architecture-container">
+                            <pre class="architecture-diagram">
+           +----------------------+
+           |        User          |
+           |   Voice Commands     |
+           +----------+-----------+
+                      |
+                      v
+           +----------------------+
+           | Speech Recognition   |
+           |      (ASR Engine)    |
+           +----------+-----------+
+                      |
+                Text Commands
+                      |
+                      v
+           +----------------------+
+           | Command Interpreter  |
+           | NLP / Parsing Layer  |
+           +----------+-----------+
+                      |
+                      v
+           +----------------------+
+           | Code Generation      |
+           |   Python Builder     |
+           +----------+-----------+
+                      |
+                      v
+           +----------------------+
+           | Interactive Code     |
+           |      Editor UI       |
+           +----------+-----------+
+                      |
+                      v
+           +----------------------+
+           | Python Execution     |
+           |  Runtime Environment |
+           +----------+-----------+
+                      |
+                      v
+           +----------------------+
+           | Output / Feedback    |
+           | Console / Results    |
+           +----------------------+
+                            </pre>
+                        </div>
+                        <p class="architecture-caption">
+                            System architecture of the Speech-Enabled IDE illustrating the pipeline from voice commands to code generation and execution.
+                        </p>
+                    </div>
+
+                    <div class="content-section">
+                        <h2>Component Breakdown</h2>
+                        <div class="component-grid">
+                            <div class="component-card">
+                                <h3><i class="fas fa-microphone"></i> User Input Layer</h3>
+                                <p>Captures voice commands from the user through microphone input. Handles audio preprocessing and noise reduction for optimal recognition accuracy.</p>
+                            </div>
+                            <div class="component-card">
+                                <h3><i class="fas fa-closed-captioning"></i> Speech Recognition</h3>
+                                <p>Converts audio signals into text using Automatic Speech Recognition. Processes spoken language and generates accurate text transcriptions.</p>
+                            </div>
+                            <div class="component-card">
+                                <h3><i class="fas fa-brain"></i> Command Interpreter</h3>
+                                <p>Uses Natural Language Processing to parse text commands and extract programming intent. Maps spoken instructions to structured code generation actions.</p>
+                            </div>
+                            <div class="component-card">
+                                <h3><i class="fas fa-code"></i> Code Generation</h3>
+                                <p>Translates parsed commands into executable Python code. Applies syntax rules and best practices to generate clean, functional code.</p>
+                            </div>
+                            <div class="component-card">
+                                <h3><i class="fas fa-edit"></i> Interactive Editor</h3>
+                                <p>Provides real-time code display and editing capabilities. Allows users to review, modify, and execute generated code interactively.</p>
+                            </div>
+                            <div class="component-card">
+                                <h3><i class="fas fa-play"></i> Python Runtime</h3>
+                                <p>Executes generated code in a secure sandbox environment. Handles runtime errors and provides execution feedback to users.</p>
+                            </div>
+                            <div class="component-card">
+                                <h3><i class="fas fa-terminal"></i> Output System</h3>
+                                <p>Displays execution results, console output, and error messages. Provides comprehensive feedback for debugging and validation.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="content-section">
+                        <h2>Technical Considerations</h2>
+                        <div class="consideration-grid">
+                            <div class="consideration-item">
+                                <h4><i class="fas fa-tachometer-alt"></i> Real-time Processing</h4>
+                                <p>The system is optimized for low-latency processing to ensure responsive voice interaction. Each pipeline component is designed for minimal processing delay.</p>
+                            </div>
+                            <div class="consideration-item">
+                                <h4><i class="fas fa-shield-alt"></i> Error Handling</h4>
+                                <p>Comprehensive error handling at each stage ensures graceful degradation when recognition or interpretation fails. Users receive clear feedback on issues.</p>
+                            </div>
+                            <div class="consideration-item">
+                                <h4><i class="fas fa-universal-access"></i> Accessibility</h4>
+                                <p>The architecture prioritizes accessibility features, supporting various speech patterns and providing alternative input methods when needed.</p>
+                            </div>
+                            <div class="consideration-item">
+                                <h4><i class="fas fa-expand"></i> Extensibility</h4>
+                                <p>Modular design allows easy addition of new programming languages, voice commands, and code generation patterns without core architecture changes.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-sidebar">
+                    <div class="sidebar-card">
+                        <h3>Architecture Details</h3>
+                        <div class="detail-item">
+                            <span class="detail-label">Pattern:</span>
+                            <span class="detail-value">Pipeline Architecture</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Processing:</span>
+                            <span class="detail-value">Sequential Flow</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Language:</span>
+                            <span class="detail-value">Python</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">ASR Engine:</span>
+                            <span class="detail-value">Custom Integration</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Latency:</span>
+                            <span class="detail-value">&lt; 2 seconds</span>
+                        </div>
+                    </div>
+                    
+                    <div class="sidebar-card">
+                        <h3>Key Technologies</h3>
+                        <div class="feature-item">
+                            <i class="fas fa-microphone"></i>
+                            <span>Speech Recognition</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-language"></i>
+                            <span>Natural Language Processing</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-code-branch"></i>
+                            <span>Code Generation</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-terminal"></i>
+                            <span>Runtime Execution</span>
+                        </div>
+                    </div>
+                    
+                    <div class="sidebar-card">
+                        <h3>Navigation</h3>
+                        <a href="speech-enabled-ide.html" class="sidebar-link">
+                            <i class="fas fa-arrow-left"></i>
+                            Back to Project
+                        </a>
+                        <a href="../index.html#projects" class="sidebar-link">
+                            <i class="fas fa-th"></i>
+                            All Projects
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="../script.js"></script>
+</body>
+</html>

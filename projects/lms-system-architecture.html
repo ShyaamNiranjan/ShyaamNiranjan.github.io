@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LMS System Architecture - Shyaam Niranjan</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../index.html" class="nav-logo">
+                <span class="logo-text">SN</span>
+                <span class="logo-dot"></span>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="../index.html" class="nav-link">Home</a></li>
+                <li><a href="../index.html#projects" class="nav-link">Projects</a></li>
+                <li><a href="../index.html#services" class="nav-link">Services</a></li>
+                <li><a href="../index.html#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Project Hero -->
+    <section class="project-hero">
+        <div class="container">
+            <div class="project-header">
+                <div class="project-breadcrumb">
+                    <a href="../index.html">Home</a>
+                    <i class="fas fa-chevron-right"></i>
+                    <a href="../index.html#projects">Projects</a>
+                    <i class="fas fa-chevron-right"></i>
+                    <a href="lms-intelligence-system.html">LMS Intelligence System</a>
+                    <i class="fas fa-chevron-right"></i>
+                    <span>System Architecture</span>
+                </div>
+                <h1 class="project-title">LMS Intelligence System Architecture</h1>
+                <p class="project-subtitle">Technical design and system integration overview</p>
+                <div class="project-tech-hero">
+                    <span class="tech-tag">FastAPI</span>
+                    <span class="tech-tag">PostgreSQL</span>
+                    <span class="tech-tag">REST APIs</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Architecture Content -->
+    <section class="project-content">
+        <div class="container">
+            <div class="project-grid">
+                <div class="project-main">
+                    <div class="content-section">
+                        <h2>System Overview</h2>
+                        <p>The LMS Intelligence System is designed as a modular backend service that seamlessly integrates with existing Learning Management Systems through secure REST APIs. The architecture follows a microservices pattern with clear separation of concerns, enabling scalability and maintainability.</p>
+                        <p>The system processes student activity data in real-time, automates grading workflows, and generates comprehensive learning analytics. All components are designed to handle high-volume data processing while maintaining data integrity and security.</p>
+                    </div>
+                    
+                    <div class="content-section">
+                        <h2>Architecture Diagram</h2>
+                        <div class="architecture-container">
+                            <pre class="architecture-diagram">
+                +----------------------+
+                |        Users         |
+                |  (Students/Faculty)  |
+                +----------+-----------+
+                           |
+                           v
+                +----------------------+
+                |   LMS Platform UI    |
+                | (Course & Submission)|
+                +----------+-----------+
+                           |
+                           v
+                +----------------------+
+                |    LMS Core System   |
+                |  (Assignments/Data)  |
+                +----------+-----------+
+                           |
+                   Secure REST APIs
+                           |
+                           v
+                +----------------------+
+                |   FastAPI Backend    |
+                |  LMS Intelligence    |
+                +----------+-----------+
+                           |
+      +--------------------+--------------------+
+      |                    |                    |
+      v                    v                    v
+
++-------------+     +--------------+     +---------------+
+| Auto-Grading|     | Analytics    |     | Skill Mapping |
+|   Engine    |     | Processing   |     |    Engine     |
++-------------+     +--------------+     +---------------+
+
+      |                    |                    |
+      +---------+----------+--------------------+
+                |
+                v
+        +---------------+
+        | PostgreSQL DB |
+        | Student Data  |
+        | Skill Metrics |
+        +---------------+
+
+                |
+                v
+       +-------------------+
+       | Insights Dashboard |
+       | Instructor Reports |
+       +-------------------+
+                            </pre>
+                        </div>
+                        <p class="architecture-caption">
+                            Architecture of the LMS Intelligence System showing how the FastAPI backend integrates with the LMS platform to provide automated grading, analytics processing, and skill mapping capabilities.
+                        </p>
+                    </div>
+
+                    <div class="content-section">
+                        <h2>Component Breakdown</h2>
+                        <div class="component-grid">
+                            <div class="component-card">
+                                <h3><i class="fas fa-users"></i> User Layer</h3>
+                                <p>Students and faculty interact through the LMS platform UI, accessing courses, submitting assignments, and viewing analytics.</p>
+                            </div>
+                            <div class="component-card">
+                                <h3><i class="fas fa-graduation-cap"></i> LMS Core System</h3>
+                                <p>Manages course content, assignments, and student data. Provides the foundation for all learning activities.</p>
+                            </div>
+                            <div class="component-card">
+                                <h3><i class="fas fa-plug"></i> API Integration Layer</h3>
+                                <p>Secure REST APIs handle authentication, data validation, and communication between LMS and the intelligence backend.</p>
+                            </div>
+                            <div class="component-card">
+                                <h3><i class="fas fa-cogs"></i> FastAPI Backend</h3>
+                                <p>Core processing engine that orchestrates auto-grading, analytics, and skill mapping operations.</p>
+                            </div>
+                            <div class="component-card">
+                                <h3><i class="fas fa-robot"></i> Auto-Grading Engine</h3>
+                                <p>Automatically evaluates student submissions using predefined rules and machine learning models.</p>
+                            </div>
+                            <div class="component-card">
+                                <h3><i class="fas fa-chart-line"></i> Analytics Processing</h3>
+                                <p>Transforms raw activity data into meaningful insights about learning patterns and performance trends.</p>
+                            </div>
+                            <div class="component-card">
+                                <h3><i class="fas fa-map"></i> Skill Mapping Engine</h3>
+                                <p>Maps student activities and assessments to defined skill categories for competency tracking.</p>
+                            </div>
+                            <div class="component-card">
+                                <h3><i class="fas fa-database"></i> PostgreSQL Database</h3>
+                                <p>Stores student data, skill metrics, and analytics results with optimized query performance.</p>
+                            </div>
+                            <div class="component-card">
+                                <h3><i class="fas fa-tachometer-alt"></i> Insights Dashboard</h3>
+                                <p>Provides instructors with comprehensive reports and visualizations of student progress.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-sidebar">
+                    <div class="sidebar-card">
+                        <h3>Architecture Details</h3>
+                        <div class="detail-item">
+                            <span class="detail-label">Pattern:</span>
+                            <span class="detail-value">Microservices</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Communication:</span>
+                            <span class="detail-value">REST APIs</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Database:</span>
+                            <span class="detail-value">PostgreSQL</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Backend:</span>
+                            <span class="detail-value">FastAPI</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Scalability:</span>
+                            <span class="detail-value">Horizontal</span>
+                        </div>
+                    </div>
+                    
+                    <div class="sidebar-card">
+                        <h3>Key Features</h3>
+                        <div class="feature-item">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>Secure API Authentication</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-sync"></i>
+                            <span>Real-time Data Processing</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-expand"></i>
+                            <span>Modular Architecture</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-chart-bar"></i>
+                            <span>Advanced Analytics</span>
+                        </div>
+                    </div>
+                    
+                    <div class="sidebar-card">
+                        <h3>Navigation</h3>
+                        <a href="lms-intelligence-system.html" class="sidebar-link">
+                            <i class="fas fa-arrow-left"></i>
+                            Back to Project
+                        </a>
+                        <a href="../index.html#projects" class="sidebar-link">
+                            <i class="fas fa-th"></i>
+                            All Projects
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="../script.js"></script>
+</body>
+</html>

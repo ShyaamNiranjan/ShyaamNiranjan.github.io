@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Structure-Preserving Semantic Image Editing - Shyaam Niranjan</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../index.html" class="nav-logo">
+                <span class="logo-text">SN</span>
+                <span class="logo-dot"></span>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="../index.html" class="nav-link">Home</a></li>
+                <li><a href="../index.html#projects" class="nav-link">Projects</a></li>
+                <li><a href="../index.html#services" class="nav-link">Services</a></li>
+                <li><a href="../index.html#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Project Hero -->
+    <section class="project-hero">
+        <div class="container">
+            <div class="project-header">
+                <div class="project-breadcrumb">
+                    <a href="../index.html">Home</a>
+                    <i class="fas fa-chevron-right"></i>
+                    <a href="../index.html#projects">Projects</a>
+                    <i class="fas fa-chevron-right"></i>
+                    <span>Structure-Preserving Semantic Image Editing</span>
+                </div>
+                <h1 class="project-title">Structure-Preserving Semantic Image Editing</h1>
+                <p class="project-subtitle">Diffusion model research system with structural constraint preservation</p>
+                <div class="project-tech-hero">
+                    <span class="tech-tag">PyTorch</span>
+                    <span class="tech-tag">Diffusion Models</span>
+                    <span class="tech-tag">Computer Vision</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Content -->
+    <section class="project-content">
+        <div class="container">
+            <div class="project-grid">
+                <div class="project-main">
+                    <div class="content-section">
+                        <h2>Project Overview</h2>
+                        <p>This project presents a structure-preserving semantic image editing framework designed to enable instruction-driven image modifications while maintaining spatial coherence and geometric integrity.</p>
+                        <p>Traditional semantic editing approaches using generative models often introduce distortions in object boundaries and spatial relationships. This system addresses those limitations by integrating explicit structural constraints into a diffusion-based image editing pipeline.</p>
+                        <p>The framework combines semantic understanding of user instructions with structural guidance derived from edge detection, segmentation maps, and spatial layout information. By injecting these constraints during the diffusion process, the system enables controlled image edits while preserving the structural consistency of the original image.</p>
+                    </div>
+                    
+                    <div class="content-section">
+                        <h2>Technical Implementation</h2>
+                        <p>The system is built around a constraint-based diffusion architecture consisting of four major components:</p>
+                        <p><strong>Semantic Understanding Module</strong><br>Interprets user instructions and extracts the intended editing operations and semantic constraints.</p>
+                        <p><strong>Structural Preservation Module</strong><br>Extracts structural cues from the input image using techniques such as edge detection, segmentation analysis, and spatial layout modeling.</p>
+                        <p><strong>Constraint-Based Diffusion Engine</strong><br>Integrates structural constraints into the diffusion denoising process to ensure spatial integrity during image generation.</p>
+                        <p><strong>Quality Assessment Pipeline</strong><br>Evaluates editing results using structural and perceptual metrics including SSIM, LPIPS, and PSNR.</p>
+                        <p>The system was implemented using PyTorch and FastAPI, with Stable Diffusion v1.5 used as the underlying generative backbone. Structural analysis components were implemented using OpenCV and DeepLabV3 segmentation models.</p>
+                    </div>
+                    
+                    <div class="content-section">
+                        <h2>Results & Impact</h2>
+                        <p>The proposed framework demonstrates significant improvements in maintaining structural consistency during semantic image editing.</p>
+                        <p>Experimental evaluation shows:</p>
+                        <p>• SSIM Score: 0.947, indicating strong structural similarity between original and edited images<br>• Improved spatial consistency compared to baseline diffusion editing methods<br>• Reduced geometric distortion in complex editing scenarios</p>
+                        <p>User evaluation studies also indicated a strong preference for the proposed system, with approximately 80% of participants favoring the structure-preserving editing results over traditional diffusion-based editing methods.</p>
+                        <p>This work demonstrates how integrating structural constraints into generative pipelines can significantly improve the reliability of instruction-driven image editing systems.</p>
+                    </div>
+
+                    <div class="content-section">
+                        <h2>Key Contributions</h2>
+                        <p>• Constraint-based diffusion editing framework<br>• Structural preservation through edge and segmentation guidance<br>• Real-time perceptual quality evaluation pipeline<br>• Adaptive CPU/GPU processing architecture</p>
+                    </div>
+                </div>
+                
+                <div class="project-sidebar">
+                    <div class="sidebar-card">
+                        <h3>Project Details</h3>
+                        <div class="detail-item">
+                            <span class="detail-label">Category:</span>
+                            <span class="detail-value">AI Research</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Technologies:</span>
+                            <span class="detail-value">PyTorch, Stable Diffusion, FastAPI, OpenCV, DeepLabV3</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Status:</span>
+                            <span class="detail-value">Research Completed – Under Review</span>
+                        </div>
+                    </div>
+                    
+                    <div class="sidebar-card">
+                        <h3>Quick Links</h3>
+                        <a href="https://github.com/ShyaamNiranjan/structure-preserving-semantic-image-editing.git" target="_blank" class="sidebar-link">
+                            <i class="fas fa-code"></i>
+                            View Source Code
+                        </a>
+                        <a href="StructurePreservingImageEditing.pdf" target="_blank" class="sidebar-link">
+                            <i class="fas fa-file-alt"></i>
+                            View Research Paper
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Related Projects -->
+    <section class="related-projects">
+        <div class="container">
+            <h2>Related Projects</h2>
+            <div class="related-grid">
+                <div class="related-card">
+                    <h3>CNN Signature Verification</h3>
+                    <p>Computer vision system for signature authenticity detection.</p>
+                    <a href="cnn-signature-verification.html">View Project →</a>
+                </div>
+                <div class="related-card">
+                    <h3>Speech-Enabled IDE</h3>
+                    <p>Voice-controlled programming environment using ASR.</p>
+                    <a href="speech-enabled-ide.html">View Project →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="../script.js"></script>
+</body>
+</html>
