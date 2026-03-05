@@ -241,6 +241,8 @@ body {
     font-weight: 500;
     color: var(--text-secondary);
     opacity: 0.9;
+    line-height: 1.0; /* Very tight spacing like reference image */
+    text-align: center; /* Center align the subtitle */
 }
 
 .hero-description {
